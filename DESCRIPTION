@@ -16,11 +16,11 @@ Imports: Rcpp (>= 1.0.8), stats, torch, splines2, ggplot2, loo, progress, progre
 LinkingTo: Rcpp, RcppArmadillo
 NeedsCompilation: yes
 Author: Reetam Majumder [aut, cre],
-        Steven Xu [aut, cre],
+        Steven Xu [aut],
         Brian Reich [ctb]
 Maintainer: Reetam Majumder <reetam.m303@gmail.com>
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-URL: https://github.com/stevengxu/SPQR, https://reetamm.github.io/SPQR/
+URL: https://reetamm.github.io/SPQR/
 BugReports: https://github.com/reetamm/SPQR/issues
