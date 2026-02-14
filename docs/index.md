@@ -18,7 +18,7 @@ You can install the development version of SPQR from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("stevengxu/SPQR")
+devtools::install_github("reetamm/SPQR")
 ```
 
 ## Example
@@ -37,7 +37,7 @@ fit <- SPQR(X = X, Y = Y, method = "MCMC", control = control, normalize = TRUE, 
 ## summarize output
 print(fit, showModel = TRUE)
 #> 
-#> SPQR fitted using MCMC approach with ARD prior<U+0001F680>
+#> SPQR fitted using MCMC approach with ARD prior🚀
 #> 
 #> Model specification:
 #>     Layers
@@ -46,12 +46,12 @@ print(fit, showModel = TRUE)
 #>       10     10    softmax
 #> 
 #> MCMC diagnostics:
-#>   Final acceptance ratio is 0.94 and target is 0.9
+#>   Final acceptance ratio is 0.90 and target is 0.9
 #> 
 #> Expected log pointwise predictive density (elpd) estimates:
-#>   elpd.LOO = 92.49707,  elpd.WAIC = 92.43618
+#>   elpd.LOO = 89.90853,  elpd.WAIC = 89.7359
 #> 
-#> Elapsed time: 0.25 minutes
+#> Elapsed time: 0.03 minutes
 
 ## plot estimated PDF with 95% credible bands
 plotEstimator(fit, type = "PDF", X = 0, ci.level = 0.95)

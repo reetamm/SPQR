@@ -2,7 +2,7 @@ pandoc: '3.2'
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles: {}
-last_built: 2026-02-14T02:12Z
+last_built: 2026-02-14T02:20Z
 urls:
   reference: https://reetamm.github.io/SPQR/reference
   article: https://reetamm.github.io/SPQR/articles

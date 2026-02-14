@@ -58,7 +58,7 @@
 <p>You can install the development version of SPQR from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"stevengxu/SPQR"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"reetamm/SPQR"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
@@ -76,7 +76,7 @@
 <span><span class="co">## summarize output</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">fit</span>, showModel <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; SPQR fitted using MCMC approach with ARD prior&lt;U+0001F680&gt;</span></span>
+<span><span class="co">#&gt; SPQR fitted using MCMC approach with ARD prior🚀</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Model specification:</span></span>
 <span><span class="co">#&gt;     Layers</span></span>
@@ -85,12 +85,12 @@
 <span><span class="co">#&gt;       10     10    softmax</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; MCMC diagnostics:</span></span>
-<span><span class="co">#&gt;   Final acceptance ratio is 0.94 and target is 0.9</span></span>
+<span><span class="co">#&gt;   Final acceptance ratio is 0.90 and target is 0.9</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Expected log pointwise predictive density (elpd) estimates:</span></span>
-<span><span class="co">#&gt;   elpd.LOO = 92.49707,  elpd.WAIC = 92.43618</span></span>
+<span><span class="co">#&gt;   elpd.LOO = 89.90853,  elpd.WAIC = 89.7359</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Elapsed time: 0.25 minutes</span></span>
+<span><span class="co">#&gt; Elapsed time: 0.03 minutes</span></span>
 <span></span>
 <span><span class="co">## plot estimated PDF with 95% credible bands</span></span>
 <span><span class="fu"><a href="reference/plotEstimator.html">plotEstimator</a></span><span class="op">(</span><span class="va">fit</span>, type <span class="op">=</span> <span class="st">"PDF"</span>, X <span class="op">=</span> <span class="fl">0</span>, ci.level <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span></code></pre></div>
@@ -139,7 +139,7 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://github.com/stevengxu/SPQR/actions" class="external-link"><img src="https://github.com/stevengxu/SPQR/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://github.com/reetamm/SPQR/actions" class="external-link"><img src="https://github.com/reetamm/SPQR/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 
