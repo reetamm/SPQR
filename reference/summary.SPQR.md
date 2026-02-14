@@ -95,6 +95,6 @@ summary(fit)
 #> Expected log pointwise predictive density (elpd) estimates:
 #>   elpd.LOO = 90.65508,  elpd.WAIC = 90.01237
 #> 
-#> Elapsed time: 0.04 minutes
+#> Elapsed time: 0.03 minutes
 # }
 ```
