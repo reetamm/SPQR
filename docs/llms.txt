@@ -1,0 +1,134 @@
+# SPQR: Semi-Parametric Quantile Regression
+
+The `SPQR` R package implements the semi-parametric quantile regression
+(SPQR) method in Xu and Reich (2021) [\[1\]](#id_1). It allows flexible
+modeling of the conditional distribution function and quantile function.
+The package provides three estimation procedures: maximum likelihood
+estimation (MLE) and maximum a posteriori (MAP) which are point
+estimates but computationally lighter, and Markov chain Monte Carlo
+(MCMC) which is fully Bayesian but computationally heavier. The MLE and
+MAP estimates are obtained using the Adam routine in `torch`, whereas
+the MCMC estimate is obtained using Stan-like Hamiltonian Monte Carlo
+(HMC) and no-U-turn sampler (NUTS).
+
+## Installation
+
+You can install the development version of SPQR from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("stevengxu/SPQR")
+```
+
+## Example
+
+Estimate normal mixture distribution:
+
+``` r
+library(SPQR)
+set.seed(919)
+n <- 200
+X <- rbinom(n, 1, 0.5)
+Y <- rnorm(n, X, 0.8)
+control <- list(iter = 300, warmup = 200, thin = 1)
+fit <- SPQR(X = X, Y = Y, method = "MCMC", control = control, normalize = TRUE, verbose = FALSE)
+
+## summarize output
+print(fit, showModel = TRUE)
+#> 
+#> SPQR fitted using MCMC approach with ARD prior<U+0001F680>
+#> 
+#> Model specification:
+#>     Layers
+#>    Input Output Activation
+#>        1     10       tanh
+#>       10     10    softmax
+#> 
+#> MCMC diagnostics:
+#>   Final acceptance ratio is 0.94 and target is 0.9
+#> 
+#> Expected log pointwise predictive density (elpd) estimates:
+#>   elpd.LOO = 92.49707,  elpd.WAIC = 92.43618
+#> 
+#> Elapsed time: 0.25 minutes
+
+## plot estimated PDF with 95% credible bands
+plotEstimator(fit, type = "PDF", X = 0, ci.level = 0.95)
+```
+
+![](reference/figures/README-example-1.png)
+
+## References
+
+\[1\] Xu, S.G. and Reich, B.J., 2021. Bayesian nonparametric quantile
+process regression and estimation of marginal quantile effects.
+Biometrics.
+
+# Package index
+
+## All functions
+
+- [`QALE()`](https://reetamm.github.io/SPQR/reference/QALE.md) :
+  quantile accumulated local effects (ALE)
+
+- [`SPQR()`](https://reetamm.github.io/SPQR/reference/SPQR.md) : Fitting
+  SPQR models
+
+- [`autoplot(`*`<SPQR>`*`)`](https://reetamm.github.io/SPQR/reference/autoplot.SPQR.md)
+  :
+
+  autoplot method for class `SPQR`
+
+- [`coef(`*`<SPQR>`*`)`](https://reetamm.github.io/SPQR/reference/coef.SPQR.md)
+  :
+
+  coef method for class `SPQR`
+
+- [`createFolds.SPQR()`](https://reetamm.github.io/SPQR/reference/createFolds.SPQR.md)
+  : generate cross-validation folds
+
+- [`cv.SPQR()`](https://reetamm.github.io/SPQR/reference/cv.SPQR.md) :
+  cross-validation for SPQR estimator
+
+- [`load.SPQR()`](https://reetamm.github.io/SPQR/reference/load.SPQR.md)
+  : load saved SPQR model
+
+- [`plotEstimator()`](https://reetamm.github.io/SPQR/reference/plotEstimator.md)
+  : plot SPQR estimators
+
+- [`plotGOF()`](https://reetamm.github.io/SPQR/reference/plotGOF.md) :
+  goodness-of-fit test for SPQR estimator
+
+- [`plotMCMCtrace()`](https://reetamm.github.io/SPQR/reference/plotMCMCtrace.md)
+  : plot MCMC trace plots
+
+- [`plotQALE()`](https://reetamm.github.io/SPQR/reference/plotQALE.md) :
+  plot accumulated local effects (ALE)
+
+- [`plotQVI()`](https://reetamm.github.io/SPQR/reference/plotQVI.md) :
+  plot variable importance comparison by quantile
+
+- [`predict(`*`<SPQR>`*`)`](https://reetamm.github.io/SPQR/reference/predict.SPQR.md)
+  :
+
+  predict method for class `SPQR`
+
+- [`print(`*`<SPQR>`*`)`](https://reetamm.github.io/SPQR/reference/print.SPQR.md)
+  :
+
+  print method for class `SPQR`
+
+- [`print(`*`<summary.SPQR>`*`)`](https://reetamm.github.io/SPQR/reference/print.summary.SPQR.md)
+  :
+
+  print method for `"summary.SPQR"`
+
+- [`save.SPQR()`](https://reetamm.github.io/SPQR/reference/save.SPQR.md)
+  : save fitted SPQR model
+
+- [`summary(`*`<SPQR>`*`)`](https://reetamm.github.io/SPQR/reference/summary.SPQR.md)
+  :
+
+  summary method for class `SPQR`
+
