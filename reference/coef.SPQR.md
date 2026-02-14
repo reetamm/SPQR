@@ -41,10 +41,10 @@ fit <- SPQR(X = X, Y = Y, method = "MCMC", control = control,
             normalize = TRUE, verbose = FALSE)
 coef(fit, X = 0)
 #>       Coefs
-#> X        theta[1]    theta[2] theta[3]  theta[4]  theta[5]  theta[6]   theta[7]
-#>   [1,] 0.01055469 0.007845938 0.105451 0.3418244 0.3533686 0.1440618 0.02596245
+#> X        theta[1]    theta[2]  theta[3] theta[4]  theta[5] theta[6]   theta[7]
+#>   [1,] 0.01593237 0.007711922 0.1041553 0.356249 0.3292596 0.141391 0.02863435
 #>       Coefs
-#> X         theta[8]   theta[9]   theta[10]
-#>   [1,] 0.003678565 0.00313917 0.004113305
+#> X         theta[8]    theta[9]   theta[10]
+#>   [1,] 0.006231929 0.004779526 0.005655068
 # }
 ```
