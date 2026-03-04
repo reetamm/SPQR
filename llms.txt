@@ -1,4 +1,4 @@
-# SPQR: Semi-Parametric Quantile Regression ![](reference/figures/logo.jpg)
+# SPQR: Semi-Parametric Quantile Regression
 
 The `SPQR` R package implements the semi-parametric quantile regression
 (SPQR) method in Xu and Reich (2021) [\[1\]](#id_1). It allows flexible

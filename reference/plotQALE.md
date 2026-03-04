@@ -78,7 +78,7 @@ control <- list(iter = 200, warmup = 150, thin = 1)
 fit <- SPQR(X=X, Y=Y, n.knots=12, n.hidden=3, method="MCMC",
             control=control, normalize=TRUE)
 #> 
-#> Starting NUTS at 2026-03-04 19:08:56.29836
+#> Starting NUTS at 2026-03-04 19:41:57.563933
 #> Error in globalCallingHandlers(condition = global_progression_handler): should not be called with handlers on the stack
 
 ## compute quantile ALE main effect of X at tau = 0.2,0.5,0.8
