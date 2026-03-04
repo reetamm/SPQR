@@ -5,7 +5,6 @@ src/*.dll
 *.model.pt
 *.pdf
 *.jpeg
-*.png
 .Rproj.user
 *.Rproj
 .Rhistory
