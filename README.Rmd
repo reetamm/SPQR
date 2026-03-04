@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# SPQR: Semi-Parametric Quantile Regression
+# SPQR: Semi-Parametric Quantile Regression <img src="man/figures/logo.jpg" align="right" height="120" alt="" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/reetamm/SPQR/workflows/R-CMD-check/badge.svg)](https://github.com/reetamm/SPQR/actions)
